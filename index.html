@@ -1,0 +1,271 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='css/typer.css'>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35547462-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type='text/javascript' src='js/typer.js'></script>
+    <script type='text/javascript' src='js/content.js'></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      <h2>Lección <span id="current-lesson"></span>. Escribe el texto que se encuentra a continuación.</h2>
+      <p>
+        <span id="tooltip-0" class="tip" rel="popover" 
+          data-content="Puedes cambiar cuanto tiempo tienes para completar la tarea"
+          data-original-title="Modificar dificultad"
+          data-trigger="hover"
+          >
+          Tienes 
+          <select id="max-minutes" class="input-small" 
+            onchange="tutor.updateMaxSeconds()">
+            <option value='0'>0</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+          </select> minutos y 
+          <select id="max-seconds" class="input-small"
+            onchange="tutor.updateMaxSeconds()">
+            <option value='0'>0</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+            <option value='10'>10</option>
+            <option value='11'>11</option>
+            <option value='12'>12</option>
+            <option value='13'>13</option>
+            <option value='14'>14</option>
+            <option value='15'>15</option>
+            <option value='16'>16</option>
+            <option value='17'>17</option>
+            <option value='18'>18</option>
+            <option value='19'>19</option>
+            <option value='20'>20</option>
+            <option value='21'>21</option>
+            <option value='22'>22</option>
+            <option value='23'>23</option>
+            <option value='24'>24</option>
+            <option value='25'>25</option>
+            <option value='26'>26</option>
+            <option value='27'>27</option>
+            <option value='28'>28</option>
+            <option value='29'>29</option>
+            <option value='30'>30</option>
+            <option value='31'>31</option>
+            <option value='32'>32</option>
+            <option value='33'>33</option>
+            <option value='34'>34</option>
+            <option value='35'>35</option>
+            <option value='36'>36</option>
+            <option value='37'>37</option>
+            <option value='38'>38</option>
+            <option value='39'>39</option>
+            <option value='40'>40</option>
+            <option value='41'>41</option>
+            <option value='42'>42</option>
+            <option value='43'>43</option>
+            <option value='44'>44</option>
+            <option value='45'>45</option>
+            <option value='46'>46</option>
+            <option value='47'>47</option>
+            <option value='48'>48</option>
+            <option value='49'>49</option>
+            <option value='50'>50</option>
+            <option value='51'>51</option>
+            <option value='52'>52</option>
+            <option value='53'>53</option>
+            <option value='54'>54</option>
+            <option value='55'>55</option>
+            <option value='56'>56</option>
+            <option value='57'>57</option>
+            <option value='58'>58</option>
+            <option value='59'>59</option>
+          </select>
+            segundos.
+        </span>
+      </p>
+      <p>
+        <span id="tooltip-1" class="tip" rel="popover" 
+            data-content="Puedes cambiar cuánto te puedes equivocar"
+            data-original-title="Modificar dificultad"
+            data-trigger="hover">
+          Precisión objetivo: 
+          <select id="target-accuracy" class="input-small"
+            onchange="tutor.updateTargetAccuracy()">
+            <option value='80'>80</option>
+            <option value='81'>81</option>
+            <option value='82'>82</option>
+            <option value='83'>83</option>
+            <option value='84'>84</option>
+            <option value='85'>85</option>
+            <option value='86'>86</option>
+            <option value='87'>87</option>
+            <option value='88'>88</option>
+            <option value='89'>89</option>
+            <option value='90'>90</option>
+            <option value='91'>91</option>
+            <option value='92'>92</option>
+            <option value='93'>93</option>
+            <option value='94'>94</option>
+            <option value='95'>95</option>
+            <option value='96'>96</option>
+            <option value='97'>97</option>
+            <option value='98'>98</option>
+            <option value='99'>99</option>
+            <option value='100'>100</option>
+          </select>
+            %.
+        </span>
+      </p>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn" onclick="tutor.restart();">
+            <i class="icon-repeat" title="Reiniciar Nivel"></i>
+          </button>
+          <button class="btn" id="volume_on" onclick="tutor.volumeOff();">
+            <i class="icon-volume-up" title="Volumen Encendido"></i>
+          </button>
+          <button class="btn" id="volume_off" onclick="tutor.volumeOn();">
+            <i class="icon-volume-off" title="Volumen Apagado"></i>
+          </button>
+          <button class="btn" id="play" onclick="tutor.start()">
+            <i class="button icon-play" title="Continuar"></i>
+          </button>
+          <button class="btn" id="pause" onclick="tutor.pause()">
+            <i class="icon-pause" title="Pausa"></i>
+          </button>
+          <button class="btn" id="first_lvl" onclick="tutor.firstLevel();">
+            <i class="icon-fast-backward" title="Primer Nivel"></i>
+          </button>
+          <button class="btn" id="prev_lvl" onclick="tutor.prevLevel();">
+            <i class="icon-backward" title="Nivel Anterior"></i>
+          </button>
+          <button class="btn" id="next_lvl" onclick="tutor.nextLevel();">
+            <i class="icon-forward" title="Siguiente Nivel"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mayus" class="warning">
+        <h2>Advertencia, mayúsculas activadas</h2>
+      </div>
+      <div>
+        <div id="interface">
+          <div id="text" class="tip" rel="popover"
+            data-content="Fíjate en las marcas que tienen las teclas f y j.
+            <br>Intenta encontrarlas con los ojos cerrados." 
+            data-original-title="Consejo"
+            data-trigger="hover"
+            >
+          </div>
+          <div id="results">
+            <div id="good-results" class="results">
+              <h2>¡Superaste la Prueba!</h2>
+              <p>
+                Presiona "enter" <img src="img/enter.png" class="enter"> para continuar<button onclick="tutor.nextLevel()" class="btn">¡Siguiente Nivel!</button>
+              </p>
+              <p>
+                Presiona "borrar" <img src="img/delete.png" class="delete"> para repetir esta lección<button onclick="tutor.restart()" class="btn">Reiniciar Lección</button>
+              </p>
+            </div>
+            <div id="bad-results" class="results">
+              <div id="slow">
+                <h2>
+                  ¡Se acabó el tiempo!
+                </h2>
+                <p>
+                   Necesitas mejorar tu velocidad para pasar el siguiente nivel
+                </p>
+              </div>
+              <div id="inaccuracy">
+                <h2>
+                  ¡Te faltó precisión!
+                </h2>
+                <p>
+                  Alcanzaste una precisión del
+                  <span class="current-accuracy"></span>%
+                  y necesitas tener <span class="target-accuracy"></span>%
+                  para pasar al siguiente nivel
+                </p>
+              </div>
+              <p>
+              ¡Puedes intentarlo de nuevo! (presiona enter <img src="img/enter.png" class="enter"> para continuar)
+                <button onclick="tutor.restart()" class="btn">
+                  Reiniciar Lección
+                </button>
+              </p>
+            </div>
+          </div>
+          <div>
+            <img src="img/hands-l.png" alt="" id="left-hand" rel="popover"
+             class="hands tip time-tip"
+             data-content="<span class='time-tip-content'>
+               La posición inicial: <br>- Dedo índice
+             de la mano izquierda en la 'F'<br>- Dedo índice de la mano derecha
+             en la 'J'</span>" 
+            data-original-title="Consejo <button type='button' class='close close-time-tip'>×</button>"
+            data-placement="left"
+            />
+            <img src="img/hands-r.png" alt="" id="right-hand" class="hands"/>
+          </div>
+        </div>      
+        <div id="performance_data">
+          <strong>
+            Precisión:
+          </strong>
+          <div id="accuracy"></div>
+          <br>
+          <div title="Tiempo que queda para completar el texto.">
+            <strong>
+              Tiempo restante
+            </strong>
+            <div id="time-left"></div>
+          </div>
+          <br>
+          <div title="Tiempo que ha transcurrido.">
+            <strong>
+             Tiempo transcurrido
+            </strong>
+            <div id="time-passed"></div>
+          </div>
+          <br>
+          <div title='Para los propósitos de medida de PPM una palabra se estandariza con 5 caracteres, así "a las" es una palabra, mientras que "veintitres" cuenta por dos.'>
+            <strong>
+              Palabras por minuto
+            </strong>
+            <div class="js-wpm"></div>
+          </div>
+        </div>
+        <div id="debug_bar">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

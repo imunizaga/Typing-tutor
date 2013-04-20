@@ -1,0 +1,129 @@
+body {
+    margin:0px 0px; padding:0px;
+    text-align:center;
+    background-color: #CCC;
+}
+#content {
+    width:1200px;
+    margin:0px auto;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+}
+
+#text{
+    text-align:left;
+}
+
+#text .letter{
+    display: inline-block;
+    padding-right: 0.2em;
+    padding-left: 0.2em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: 1.8em;
+    height: 40px;
+    vertical-align: bottom;
+}
+
+.wrong{
+    background-color: #ff2222;
+}
+
+.correct{
+    background-color: #22ff22;
+}
+
+.current.right{
+    background-color: #ffff55; 
+}
+.current.left{
+    background-color: #bbddff;
+}
+
+#accuracy{
+    font-size: 30px; 
+}
+
+#timer{
+    display: inline-block;
+    font-size: 20px; 
+}
+
+#interface{
+    display: inline-block;
+}
+
+#performance_data{
+    vertical-align: top;
+    display: inline-block;
+    background-color: #cceeff;
+    height: 30em;
+    border-radius: 10px;
+    min-width: 148px;
+}
+
+#debug_bar{
+    vertical-align: top;
+    display: inline-block;
+    background-color: #ffeecc;
+    height: 30em;
+    width: 2em;
+    border-radius: 10px;
+}
+
+#debug_bar p{
+    margin: 0;
+}
+
+.warning{
+    background-color: #ffffaa;
+    color: #ff3300;
+}
+
+.hands{
+    width: 18em;
+}
+
+.enter{
+    height: 1.2em;
+    position: relative;
+    top: 2px;
+}
+.delete{
+    height: 0.8em;
+}
+
+p{
+    font-size: 1.3em;
+}
+
+#results{
+    text-align:left;
+}
+
+.results{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#good-results{
+    background-color: #aaffaa;
+}
+
+#bad-results{
+    background-color: #ffaaaa;
+}
+
+h3{
+    margin-bottom: 0px;
+}
+
+ul#icons {margin: 0; padding: 0;}
+ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+ul#icons span.ui-icon {float: left; margin: 0 4px;}
+
+
+.popover-content{
+    text-align: left;
+}
