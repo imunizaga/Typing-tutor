@@ -2,56 +2,217 @@ function Content() {
     "use strict";
 
     this.getText = function () {
-        var text =  [
-            "jjj fff jjj fff jjf ffj jfj fjf\nfjj jff jjf ffj jfj fjf fjj jff jff",
-            "kkk ddd kkk ddd kkd ddk kdk dkd\ndkk kdd kkd ddk kdk dkd dkk kdd\nffk jjd kkj ddf fjk kjd dfj kjf dkfj",
-            "lll sss lll sss lls ssl lsl sls\nsll lss lls ssl lsl sls sll lss\nflk jsd ksj dlf fsk kld dsj klf dlfj",
-            "ñññ aaa ñññ aaa ñña aañ ñañ aña\naññ ñaa ñña aañ ñañ aña aññ ñaa\nla sala da kada faja daña jada da",
-            "hhh ggg hhh ggg hhg ggh hgh ghg\nghh hgg hhg ggh hgh ghg ghh hgg\nla daga daña la faja kada ha sal",
-            "la daga daña las alas a las hadas\nla gala da la salada sal a ada\nfallas al dañar las fajas a las hadas",
-            "sada faga haja kala ñasa dafa\ngaha jaka laña asdf ñlkj asdfg\nhjklñ gfdas añsldkfjgh ghfjdkslañ",
+        var i, text =  [
+            // jf
+            ["jjj fff jjj fff jjf ffj jfj fjf",
+                "fjj jff jjf ffj jfj fjf fjj jff jff"],
+            // jf kd
+            ["kkk ddd kkk ddd kkd ddk kdk dkd",
+                "dkk kdd kkd ddk kdk dkd dkk kdd",
+                "ffk jjd kkj ddf fjk kjd dfj kjf dkfj"],
+            // jf kd ls
+            ["lll sss lll sss lls ssl lsl sls",
+                "sll lss lls ssl lsl sls sll lss",
+                "flk jsd ksj dlf fsk kld dsj klf dlfj"],
+            // jf kd ls ña
+            ["ñññ aaa ñññ aaa ñña aañ ñañ aña",
+                "aññ ñaa ñña aañ ñañ aña aññ ñaa",
+                "la sala da kada faja daña jada da"],
+            // jf kd ls ña hg
+            ["hhh ggg hhh ggg hhg ggh hgh ghg",
+                "ghh hgg hhg ggh hgh ghg ghh hgg",
+                "la daga daña la faja kada ha sal"],
+            ["la daga daña las alas a las hadas",
+                "das la salada sal a la lasaña",
+                "fallas al dañar las fajas a las hadas"],
+            ["sada faga haja kala ñasa dafa",
+                "gaha jaka laña asdf ñlkj asdfg",
+                "hjklñ gfdas añsldkfjgh ghfjdkslañ"],
 
-            "yyy ttt yyy ttt yyt tty yty tyt\ntyy ytt yyt tty yty tyt tyy ytt\nla gata tala y talla la atalaya",
-            "uuu rrr uuu rrr uur rru uru rur\nruu urr uur rru uru rur ruu urr\nla hada usa la daga y raja la faja",
-            "iii eee iii eee iie eei iei eie\neii iee iie eei iei eie eii iee\nda risa freir tus fresas y salarlas",
-            "ooo www ooo www oow wwo owo wow\nwoo oww oow wwo owo wow woo oww\na los osos les da risa freir kiwis",
-            "ppp qqq ppp qqq ppq qqp pqp qpq\nqpp pqq ppq qqp pqp qpq qpp pqq\nrio porque puedo tipear hartas frases",
-            "ahora se que puedo freir fresas\ny kiwis y puedo tipear rapido\npor eso rio y yo digo jaja y waja",
-            "el gusto de tipear lo sigo y rio\nque la fresa se fria y el queso\nlas frases ",
+            // jf kd ls ña hg ty
+            ["yyy ttt yyy ttt yyt tty yty tyt",
+                "tyy ytt yyt tty yty tyt tyy ytt",
+                "la gata tala y talla la atalaya"],
+            ["ata gata tala hasta tal faltal",
+                "y ya hay haya atalaya yak",
+                "hay gatas hasta la lasaña"],
 
-            "mmm vvv mmm vvv mmv vvm mvm vmv\nvmm mvv mmv vvm mvm vmv vmm mvv\ntipear rapido es lo mejor ya veras",
-            "nnn bbb nnn bbb nnb bbn nbn bnb\nbnn nbb nnb bbn nbn bnb bnn nbb\nla trompeta resuena y el bombo tambien",
-            ",,, ccc ,,, ccc ,,c cc, ,c, c,c\nc,, ,cc ,,c cc, ,c, c,c c,, ,cc\nno te comas las comas porque sirven mucho",
-            "... xxx ... xxx ..x xx. .x. x.x\nx.. .xx ..x xx. .x. x.x x.. .xx\nlos puntos son extremos.\npermiten separar ideas.",
-            "--- zzz --- zzz --z zz- -z- z-z\nz-- -zz --z zz- -z- z-z z-- -zz\nya sabemos desde la a hasta la z,\nincluso el -.",
-            "ahora podemos escribir con todas\nlas letras, pero todavia nos falta mucho.\nvamos a practicar un poco antes de continuar",
-            "notaras que todavia no tenemos tildes.\ntampoco tenemos mayusculas.\npero por mientras podemos practicar sin ellas.",
-            "hay varios gatos en los tejados,\nmiran hacia abajo con expectacion\npues abajo alguien esta cocinando pescados",
-            "es mejor lavar la lechuga antes de comer\npues pueden contener bacterias y tierra\nrecuerda que es mejor prevenir que curar.",
-            "recuerda practicar todos los dias.\nmientras escribes un correo electronico,\no mientrasestas en el chat.",
-            "suficiente de practica por ahora.\ntenemos que seguir avanzando.\nlo siguiente que vamos a ver son las tildes",
+            // jf kd ls ña hg ty ur
+            ["uuu rrr uuu rrr uur rru uru rur",
+                "ruu urr uur rru uru rur ruu urr",
+                "la hada usa la daga y raja la faja"],
+            [
+                "rata raya araña ruda rala arar",
+                "usa hurta ayuda guadaña uña gula",
+                "ayuda a la araña a salar la lasaña" ],
 
-            "la tilde se hace con el dedo\npequeño de la mano derecha y\nluego se presiona la vocal.",
-            "frágil, lunático, asiático, fábrica.\npráctico, obstáculo, cadáver, carácter.\nacuático, fantástico, hectárea.",
-            "hélice, héroe, déficit, éxtasis.\nocéano, término, acérrimo, bélgica.\nibérico, arsénico, intérprete, bélico.",
-            "magnífico, antídoto, monosílaba.\nfrívolo, vehículo, antígona.\nídolo, etíope, fatídico, hígado, insípido.",
-            "irónico, campeón, canción, mansión.\npólvora, evaporación, bastón.\ninformación, ópalo, órdenes, endócrino",
-            "betún, brújula, esdrújula, común.\nnúmero, músico, atún, cúpula.\nacústico, algún, asegúrese, cúspide.",
-            "la opción más válida es legítima. el\nmagnífico árbol es una fábrica de oxígeno\nla tarántula es fantástica y terrorífica.",
-            "ahora podemos escribir todas las\npalabras en el castellano. nos faltan las\nmayúsculas, y estaremos listos con las letras",
-            "Si la letra se escribe con la mano derecha,\nentonces se presiona mayúscula con la\nmano izquierda.",
-            "Presiona Mayúscula con la Mano\nIzquierda. Ye U I O Pe Hache.\nJota Ka eLe eÑe eNe eMe.",
-            "Presiona Mayúscula con la Mano\nDerecha. Qu W E eRe Te A Ese De.\neFe Ge Zeta X Ce uVe Be.",
-            "QqQq WwWw EeEe RrRr TtTt\nAaAa SsSs DdDd FfFf GgGg\nZzZz XxXx CcCc VvVv BbBb",
-            "PpPp OoOo IiIi UuUu YyYy\nÑñÑñ LlLl KkKk JjJj HhHh\nMmMm NnNn",
-            "Ahora ya conocemos las mayúsculas\ny las tildes. Nos faltan todavía los\nsímbolos de pregunta y exclamación.",
-            "Mayúscula con la derecha\nLuego apretar 1 con la izquierda!\n!!!! !!!! !!!! !!!!",
-            "Mayúscula con la izquierda\nLuego apretar símbolo con la derecha\n¡¡¡ ¡¡¡¡ ¡¡¡¡ ¡¡¡¡",
-            "Dedo pequeño mano izquierda\n¿¿¿¿ ¿¿¿¿ ¿¿¿¿ ¿¿¿¿",
-            "Mayúscula con la izquierda\nLuego apretar símbolo con la derecha\n???? ???? ???? ????",
-            "¿Te das cuenta que ya puedes\nescribir todo el español? ¡Felicidades!\n¡Ahora debes practicar por tu cuenta!",
-            "¡Terminaste!\n¡Muchas gracias por utilizar este programa!"
+            // jf kd ls ña hg ty ur ei
+            [
+                "iii eee iii eee iie eei iei eie",
+                "eii iee iie eei iei eie eii iee",
+                "da risa freir tus fresas y salarlas"],
+            [
+                "seda helar falle gatee jale eñe esta",
+                "salir di fila gatita guia riña lista",
+                "ya esta lista la fruta frita"],
+
+            // jf kd ls ña hg ty ur ei ow
+            ["ooo www ooo www oow wwo owo wow",
+                "woo oww oow wwo owo wow woo oww",
+                "a los osos les da risa freir kiwis"],
+            [
+                "kilo oso dedo hueso gato jalo sueño",
+                "waldo wario waluigi waka wally kiwi",
+                "wally esta ahi o era waldo"],
+
+            // jf kd ls ña hg ty ur ei ow pq
+            ["ppp qqq ppp qqq ppq qqp pqp qpq",
+                "qpp pqq ppq qqp pqp qpq qpp pqq",
+                "rio porque puedo tipear hartas frases"],
+            [
+                "por para pasa pido felpa golpe pata",
+                "quitsol quiero queja pequeño queda",
+                "porque quiero queso para ti"],
+            ["ahora ya se que puedo freir fresas",
+                "y kiwis y puedo tipear rapido",
+                "por eso rio y yo digo jaja y waja"],
+            ["el gusto de tipear lo sigo y rio",
+                "que la fresa se fria y el queso",
+                "las frases "],
+
+            // jf kd ls ña hg ty ur ei ow pq mv
+            ["mmm vvv mmm vvv mmv vvm mvm vmv",
+                "vmm mvv mmv vvm mvm vmv vmm mvv",
+                "tipear rapido es lo mejor ya veras"],
+            [
+                "medio malla moto quema rima timo muy",
+                "vaya vaga salva java viña oveja voy",
+                "ya llevamos mas de la mitad"],
+
+            // jf kd ls ña hg ty ur ei ow pq mv nb
+            ["nnn bbb nnn bbb nnb bbn nbn bnb",
+                "bnn nbb nnb bbn nbn bnb bnn nbb",
+                "la trompeta resuena y el bombo tambien"],
+            [
+                "nada nose freno mina vino niño lana",
+                "balon barata bis bello fiebre baña",
+                "el es muy bueno jugando al balon"],
+
+            // jf kd ls ña hg ty ur ei ow pq mv mb ,c
+            [",,, ccc ,,, ccc ,,c cc, ,c, c,c",
+                "c,, ,cc ,,c cc, ,c, c,c c,, ,cc",
+                "no te comas las comas porque sirven mucho"],
+            [
+                "casa, cafe, crater, copa, cama, cordura,",
+                "puedes aumentar la dificultad, aumentando",
+                "la precision, o disminuyendo el tiempo,"],
+
+            // jf kd ls ña hg ty ur ei ow pq mv mb ,c .x
+            ["... xxx ... xxx ..x xx. .x. x.x",
+                "x.. .xx ..x xx. .x. x.x x.. .xx",
+                "los puntos son extremos.",
+                "permiten separar ideas."],
+            [
+                "extraño. xilofono. saxofon. fax. nexo. taxi.",
+                "sexto. oxigeno. oxido. texto. extra. latex.",
+                "ya casi podemos escribir cualquier texto."],
+
+            // jf kd ls ña hg ty ur ei ow pq mv mb ,c .x -z
+            ["--- zzz --- zzz --z zz- -z- z-z",
+                "z-- -zz --z zz- -z- z-z z-- -zz",
+                "ya sabemos desde la a hasta la z,",
+                "incluso el -."],
+            [
+                "pez-tez-lapiz-voraz-rapaz-feliz-fugaz",
+                "oz-faz-caliz-abraza-tiza-zaqueo-zapato",
+                "que felicidad, ya tenemos todoas las letras"],
+
+            ["ahora podemos escribir con todas",
+                "las letras, pero todavia nos falta mucho.",
+                "vamos a practicar un poco antes de continuar"],
+            ["notaras que todavia no tenemos tildes.",
+                "tampoco tenemos mayusculas.",
+                "pero por mientras podemos practicar sin ellas."],
+            [
+                "recuerda practicar siempre escribiendo con",
+                "todos los dedos, ya que la practica hace al",
+                "maestro. practica cuando escribes correos"],
+            ["hay varios gatos en los tejados,",
+                "miran hacia abajo con expectacion",
+                "pues abajo alguien esta cocinando pescados"],
+            ["es mejor lavar la lechuga antes de comer",
+                "pues pueden contener bacterias y tierra",
+                "recuerda que es mejor prevenir que curar."],
+            ["recuerda practicar todos los dias.",
+                "mientras escribes un correo electronico,",
+                "o mientrasestas en el chat."],
+            ["suficiente de practica por ahora.",
+                "tenemos que seguir avanzando.",
+                "lo siguiente que vamos a ver son las tildes"],
+
+            ["la tilde se hace con el dedo",
+                "pequeño de la mano derecha y",
+                "luego se presiona la vocal."],
+            ["frágil, lunático, asiático, fábrica.",
+                "práctico, obstáculo, cadáver, carácter.",
+                "acuático, fantástico, hectárea."],
+            ["hélice, héroe, déficit, éxtasis.",
+                "océano, término, acérrimo, bélgica.",
+                "ibérico, arsénico, intérprete, bélico."],
+            ["magnífico, antídoto, monosílaba.",
+                "frívolo, vehículo, antígona.",
+                "ídolo, etíope, fatídico, hígado, insípido."],
+            ["irónico, campeón, canción, mansión.",
+                "pólvora, evaporación, bastón.",
+                "información, ópalo, órdenes, endócrino"],
+            ["betún, brújula, esdrújula, común.",
+                "número, músico, atún, cúpula.",
+                "acústico, algún, asegúrese, cúspide."],
+            ["la opción más válida es legítima. el",
+                "magnífico árbol es una fábrica de oxígeno",
+                "la tarántula es fantástica y terrorífica."],
+            ["ahora podemos escribir todas las",
+                "palabras en el castellano. nos faltan las",
+                "mayúsculas, y estaremos listos con las letras"],
+            ["Si la letra se escribe con la mano derecha,",
+                "entonces se presiona mayúscula con la",
+                "mano izquierda."],
+            ["Presiona Mayúscula con la Mano",
+                "Izquierda. Ye U I O Pe Hache.",
+                "Jota Ka eLe eÑe eNe eMe."],
+            ["Presiona Mayúscula con la Mano",
+                "Derecha. Qu W E eRe Te A Ese De.",
+                "eFe Ge Zeta X Ce uVe Be."],
+            ["QqQq WwWw EeEe RrRr TtTt",
+                "AaAa SsSs DdDd FfFf GgGg",
+                "ZzZz XxXx CcCc VvVv BbBb"],
+            ["PpPp OoOo IiIi UuUu YyYy",
+                "ÑñÑñ LlLl KkKk JjJj HhHh",
+                "MmMm NnNn"],
+            ["Ahora ya conocemos las mayúsculas",
+                "y las tildes. Nos faltan todavía los",
+                "símbolos de pregunta y exclamación."],
+            ["Mayúscula con la derecha",
+                "Luego apretar 1 con la izquierda!",
+                "!!!! !!!! !!!! !!!!"],
+            ["Mayúscula con la izquierda",
+                "Luego apretar símbolo con la derecha",
+                "¡¡¡ ¡¡¡¡ ¡¡¡¡ ¡¡¡¡"],
+            ["Dedo pequeño mano izquierda",
+                "¿¿¿¿ ¿¿¿¿ ¿¿¿¿ ¿¿¿¿"],
+            ["Mayúscula con la izquierda",
+                "Luego apretar símbolo con la derecha",
+                "???? ???? ???? ????"],
+            ["¿Te das cuenta que ya puedes",
+                "escribir todo el español? ¡Felicidades!",
+                "¡Ahora debes practicar por tu cuenta!"],
+            ["¡Terminaste!",
+                "¡Muchas gracias por utilizar este programa!"]
         ];
+
+        for (i = 0; i < text.length; i += 1) {
+            text[i] = text[i].join("\n");
+        }
         return text;
     };
 }
