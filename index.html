@@ -37,8 +37,7 @@ and open the template in the editor.
           data-trigger="hover"
           >
           Tienes 
-          <select id="max-minutes" class="input-small" 
-            onchange="tutor.updateMaxSeconds()">
+          <select id="max-minutes" class="input-small max_seconds_select">
             <option value='0'>0</option>
             <option value='1'>1</option>
             <option value='2'>2</option>
@@ -46,8 +45,7 @@ and open the template in the editor.
             <option value='4'>4</option>
             <option value='5'>5</option>
           </select> minutos y 
-          <select id="max-seconds" class="input-small"
-            onchange="tutor.updateMaxSeconds()">
+          <select id="max-seconds" class="input-small max_seconds_select">
             <option value='0'>0</option>
             <option value='1'>1</option>
             <option value='2'>2</option>
@@ -118,8 +116,7 @@ and open the template in the editor.
             data-original-title="Modificar dificultad"
             data-trigger="hover">
           Precisión objetivo: 
-          <select id="target-accuracy" class="input-small"
-            onchange="tutor.updateTargetAccuracy()">
+          <select id="target-accuracy" class="input-small target_accuracy_select">
             <option value='80'>80</option>
             <option value='81'>81</option>
             <option value='82'>82</option>
@@ -147,28 +144,28 @@ and open the template in the editor.
       </p>
       <div class="btn-toolbar">
         <div class="btn-group">
-          <button class="btn" onclick="tutor.restart();">
+          <button class="btn restart_button">
             <i class="icon-repeat" title="Reiniciar Nivel"></i>
           </button>
-          <button class="btn" id="volume_on" onclick="tutor.volumeOff();">
+          <button class="btn" id="volume_on">
             <i class="icon-volume-up" title="Volumen Encendido"></i>
           </button>
-          <button class="btn" id="volume_off" onclick="tutor.volumeOn();">
+          <button class="btn" id="volume_off">
             <i class="icon-volume-off" title="Volumen Apagado"></i>
           </button>
-          <button class="btn" id="play" onclick="tutor.start()">
+          <button class="btn" id="play">
             <i class="button icon-play" title="Continuar"></i>
           </button>
-          <button class="btn" id="pause" onclick="tutor.pause()">
+          <button class="btn" id="pause">
             <i class="icon-pause" title="Pausa"></i>
           </button>
-          <button class="btn" id="first_lvl" onclick="tutor.firstLevel();">
+          <button class="btn" id="first_lvl">
             <i class="icon-fast-backward" title="Primer Nivel"></i>
           </button>
-          <button class="btn" id="prev_lvl" onclick="tutor.prevLevel();">
+          <button class="btn" id="prev_lvl">
             <i class="icon-backward" title="Nivel Anterior"></i>
           </button>
-          <button class="btn" id="next_lvl" onclick="tutor.nextLevel();">
+          <button class="btn" id="next_lvl">
             <i class="icon-forward" title="Siguiente Nivel"></i>
           </button>
         </div>
@@ -189,10 +186,15 @@ and open the template in the editor.
             <div id="good-results" class="results">
               <h2>¡Superaste la Prueba!</h2>
               <p>
-                Presiona "enter" <img src="img/enter.png" class="enter"> para continuar<button onclick="tutor.nextLevel()" class="btn">¡Siguiente Nivel!</button>
+                Presiona "enter" <img src="img/enter.png" class="enter"> para continuar<button id="next_level_button" class="btn">¡Siguiente Nivel!</button>
               </p>
               <p>
-                Presiona "borrar" <img src="img/delete.png" class="delete"> para repetir esta lección<button onclick="tutor.restart()" class="btn">Reiniciar Lección</button>
+                Presiona "borrar" 
+                <img src="img/delete.png" class="delete">
+                para repetir esta lección
+                <button class="restart_button btn">
+                  Reiniciar Lección
+                </button>
               </p>
             </div>
             <div id="bad-results" class="results">
@@ -217,7 +219,7 @@ and open the template in the editor.
               </div>
               <p>
               ¡Puedes intentarlo de nuevo! (presiona enter <img src="img/enter.png" class="enter"> para continuar)
-                <button onclick="tutor.restart()" class="btn">
+                <button class="btn restart_button">
                   Reiniciar Lección
                 </button>
               </p>

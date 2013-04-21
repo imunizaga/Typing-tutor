@@ -277,7 +277,55 @@ function TypingTutor(texts) {
             tutor.handleKeyPress(keycode);
         });
 
+        this.bindEvents();
         this.restart();
+    };
+
+    this.bindEvents = function () {
+        var self = this;
+        $('.restart_button').click(function () {
+            self.restart();
+        });
+
+        $('#volume_on').click(function () {
+            self.volumeOff();
+        });
+
+        $('#volume_off').click(function () {
+            self.volumeOn();
+        });
+
+        $('#play').click(function () {
+            self.start();
+        });
+
+        $('#pause').click(function () {
+            self.pause();
+        });
+
+        $('#first_lvl').click(function () {
+            self.firstLevel();
+        });
+
+        $('#prev_lvl').click(function () {
+            self.prevLevel();
+        });
+
+        $('#next_lvl').click(function () {
+            self.nextLevel();
+        });
+
+        $('#next_level_button').click(function () {
+            self.nextLevel();
+        });
+
+        $('.max_seconds_select').change(function () {
+            self.updateMaxSeconds();
+        });
+
+        $('.target_accuracy_select').click(function () {
+            self.updateTargetAccuracy();
+        });
     };
 
     this.handleCapsLock = function (e) {
@@ -320,7 +368,7 @@ function TypingTutor(texts) {
         if (!tutor.ended) {
 
             if (this.shouldHandleKey(keycode)) {
-
+                $('select').blur();
                 this.words_pressed += 1;
 
                 if (!started) {
