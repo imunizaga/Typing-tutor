@@ -33,7 +33,7 @@ function Content() {
             ["yyy ttt yyy ttt yyt tty yty tyt",
                 "tyy ytt yyt tty yty tyt tyy ytt",
                 "la gata tala y talla la atalaya"],
-            ["ata gata tala hasta tal faltal",
+            ["ata gata tala hasta tal fatal",
                 "y ya hay haya atalaya yak",
                 "hay gatas hasta la lasaña"],
 
