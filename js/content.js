@@ -71,14 +71,16 @@ function Content() {
                 "rio porque puedo tipear hartas frases"],
             [
                 "por para pasa pido felpa golpe pata",
-                "quitsol quiero queja pequeño queda",
+                "quitasol quiero queja pequeño queda",
                 "porque quiero queso para ti"],
+            [
+                "el gusto de tipear frases rapido",
+                "falta estudiar las tildes y otras",
+                "letras y luego repasar repasar"],
+
             ["ahora ya se que puedo freir fresas",
                 "y kiwis y puedo tipear rapido",
                 "por eso rio y yo digo jaja y waja"],
-            ["el gusto de tipear lo sigo y rio",
-                "que la fresa se fria y el queso",
-                "las frases "],
 
             // jf kd ls ña hg ty ur ei ow pq mv
             ["mmm vvv mmm vvv mmv vvm mvm vmv",
