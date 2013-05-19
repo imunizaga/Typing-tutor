@@ -231,6 +231,8 @@ function TypingTutor(texts) {
     this.initialize = function () {
         var inputLetter, correctLetter, keycode, self = this;
 
+        this.reformatHandMap();
+
         // initialize interface
         $('i').tooltip('hide');
         $(".tip").popover('hide');
