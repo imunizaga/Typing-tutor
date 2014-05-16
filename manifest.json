@@ -1,7 +1,7 @@
 {
     "name": "Tutor de tipeo",
     "manifest_version": 2,
-    "version": "15.3",
+    "version": "15.4",
     
     "description": "Un tutor de tipeo en espa\u00F1ol, para aprender mecanograf\u00EDa",
     "icons": {
