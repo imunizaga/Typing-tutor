@@ -198,6 +198,9 @@ function TypingTutor(texts) {
         this.updateProgress();
     };
 
+    /*
+     * transforms the array of letters in the map, into a letter dictionary.
+     */
     this.reformatHandMap = function() {
         var rightLetters = {}, leftLetters = {}, i, j;
 
@@ -223,6 +226,8 @@ function TypingTutor(texts) {
         var keycode;
         var self = this;
         var textIndex;
+
+        this.reformatHandMap();
 
         // initialize interface
         $('i').tooltip('hide');
