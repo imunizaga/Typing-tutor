@@ -1,20 +1,19 @@
 {
-    "name": "Tutor de tipeo",
-    "manifest_version": 2,
-    "version": "15.6",
-    
-    "description": "Un tutor de tipeo en espa\u00F1ol, para aprender mecanograf\u00EDa",
-    "icons": {
-        "128": "icon_128.png",
-        "16": "icon_16.png"
-    },
-    
-    "app": {
-        "launch": {
-            "local_path": "index.html"
-        }
-    },
-
-   "update_url": "http://clients2.google.com/service/update2/crx",
-   "offline_enabled": true
+  "name": "Tutor de tipeo",
+  "manifest_version": 3,
+  "version": "15.7",
+  "description": "Un tutor de tipeo en español, para aprender mecanografía",
+  "icons": {
+    "128": "icon_128.png",
+    "16": "icon_16.png"
+  },
+  "permissions": [],
+  "host_permissions": [],
+  "offline_enabled": true,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "icon_128.png"
+  }
 }
